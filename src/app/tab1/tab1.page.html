@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Using chart.js
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,29 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Using chart.js</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <canvas class="container" #lineChartCanvas></canvas>
+  <div class="ion-text-center ion-padding-bottom ion-margin-bottom">
+    <ion-button (click)="addData(lineChart, lineChartX); lineChartX=lineChartX+1" fill="solid" size="small">
+      Add data
+    </ion-button>
+  </div>
+
+  <canvas class="container" #barChartCanvas></canvas>
+  <div class="ion-text-center ion-padding-bottom ion-margin-bottom">
+    <ion-button (click)="addData(barChart, barChartX); barChartX=barChartX+1" fill="solid" size="small">
+      Add data
+    </ion-button>
+  </div>
+
+  <canvas class="container" #comboChartCanvas></canvas>
+  <div class="ion-text-center ion-padding-bottom ion-margin-bottom">
+    <ion-button (click)="addData(comboChart, comboChartX); comboChartX=comboChartX+1" fill="solid" size="small">
+      Add data
+    </ion-button>
+  </div>
+
 </ion-content>

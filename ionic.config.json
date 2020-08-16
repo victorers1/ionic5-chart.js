@@ -1,5 +1,7 @@
 {
   "name": "chartjs",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
